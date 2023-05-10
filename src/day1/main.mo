@@ -3,7 +3,7 @@ import Int "mo:base/Int";
 
 actor class Calculator() {
   // Step 1 -  Define a mutable variable called `counter`.
-  var counter : Float = 0;
+  var counter : Float = 0.0;
   // Step 2 - Implement add
   public func add(x : Float) : async Float {
     counter := counter + x;
