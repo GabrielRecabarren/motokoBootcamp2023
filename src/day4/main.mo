@@ -11,39 +11,39 @@ import Account "Account";
 import BootcampLocalActor "BootcampLocalActor";
 
 actor class MotoCoin() {
-  public type Account = Account.Account;
+    public type Account = Account.Account;
 
-  // Returns the name of the token
-  public query func name() : async Text {
-    return "";
-  };
+    // Returns the name of the token
+    public query func name() : async Text {
+        return "";
+    };
 
-  // Returns the symbol of the token
-  public query func symbol() : async Text {
-    return "";
-  };
+    // Returns the symbol of the token
+    public query func symbol() : async Text {
+        return "";
+    };
 
-  // Returns the the total number of tokens on all accounts
-  public func totalSupply() : async Nat {
-    return 9;
-  };
+    // Returns the the total number of tokens on all accounts
+    public func totalSupply() : async Nat {
+        return 9;
+    };
 
-  // Returns the default transfer fee
-  public query func balanceOf(account : Account) : async (Nat) {
-    return 9;
-  };
+    // Returns the default transfer fee
+    public query func balanceOf(account : Account) : async (Nat) {
+        return 9;
+    };
 
-  // Transfer tokens to another account
-  public shared ({ caller }) func transfer(
-    from : Account,
-    to : Account,
-    amount : Nat,
-  ) : async Result.Result<(), Text> {
-    return #ok;
-  };
+    // Transfer tokens to another account
+    public shared ({ caller }) func transfer(
+        from : Account,
+        to : Account,
+        amount : Nat
+    ) : async Result.Result<(), Text> {
+        return #ok;
+    };
 
-  // Airdrop 1000 MotoCoin to any student that is part of the Bootcamp.
-  public func airdrop() : async Result.Result<(), Text> {
-    return #err("not implemented");
-  };
+    // Airdrop 1000 MotoCoin to any student that is part of the Bootcamp.
+    public func airdrop() : async Result.Result<(), Text> {
+        return #err("not implemented");
+    };
 };
