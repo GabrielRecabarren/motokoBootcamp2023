@@ -1,10 +1,17 @@
 import Result "mo:base/Result";
+import Principal "mo:base/Principal";
 
 module {
   public type StudentProfile = {
     name : Text;
-    Team : Text;
+    team : Text;
     graduate : Bool;
+  };
+
+  public type Error = {
+    #Anonymous;
+    #NotAnAdmin;
+    #UnexpectedError : Text;
   };
 
   public type CalculatorInterface = actor {
